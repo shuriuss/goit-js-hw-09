@@ -13,7 +13,7 @@ function handler(event) {
 
   for (let i = 0; i <= obj.amount; i += 1) {
     const newStep = obj.delay + obj.step * i;
-    createPromise(i, newStep)
+    createPromise(i+1, newStep)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
         console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
