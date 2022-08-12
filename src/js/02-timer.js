@@ -42,7 +42,7 @@ flatpickr(inputTime, options);
 function handler() {
   const dateFut = new Date(inputTime.value);
   timerId = setInterval(() => {
-    dateNow = new Date();
+    const dateNow = new Date();
     const time = dateFut.getTime() - dateNow.getTime();
     if (time <= 0) {
       clearInterval(timerId);
